@@ -3,7 +3,6 @@ import matplotlib.pyplot
 import numpy
 import string
 import pandas
-import wordcloud
 
 streamlit.write('# Entropy of written English')
 streamlit.write('Entropy is a measure of the uncertainty or randomness of a system. In the context of written English, entropy can refer to the amount of unpredictability or variability in the language.')
@@ -97,7 +96,6 @@ if streamlit.button('Analyse'):
     col1,col2= streamlit.columns(2)
     col1.metric('Letter Count',len(str(text)))
     col2.metric('Word Count',len((text).split(' ')))
-    streamlit.pyplot(Cloud(text))
     streamlit.write('## Distribution of Word Length')
     streamlit.pyplot(diswl(text))
     streamlit.write('## Frequency of Letters')
